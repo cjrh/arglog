@@ -24,7 +24,7 @@ def patch(parser, default='INFO', basicConfig_kwargs=None):
     def configure_logging(args):
         logging.basicConfig(
             level=logging._nameToLevel[args.loglevel],
-            **basicConfig_kwargs,
+            **basicConfig_kwargs
         )
 
     original_parse_args = parser.parse_args
