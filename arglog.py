@@ -13,17 +13,25 @@ from argparse import ArgumentParser
 import logging
 
 
+try:
+    # Python 3
+    _level_names = logging._nameToLevel
+except:
+    # Python 2
+    _level_names = logging._levelNames
+
+
 def patch(parser, default='INFO', basicConfig_kwargs=None):
     # type: (ArgumentParser, str) -> None
     basicConfig_kwargs = basicConfig_kwargs or {}
     parser.add_argument(
         '-l', '--loglevel', help='Logging level', default=default,
-        choices=list(logging._nameToLevel.keys()),
+        choices=list(_level_names.keys()),
     )
 
     def configure_logging(args):
         logging.basicConfig(
-            level=logging._nameToLevel[args.loglevel],
+            level=_level_names[args.loglevel],
             **basicConfig_kwargs
         )
 
