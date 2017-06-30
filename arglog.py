@@ -7,7 +7,7 @@ Automatically configure an argparse.ArgumentParser with a --loglevel option.
 
 """
 
-__version__ = '2017.6.1'
+__version__ = '2017.6.2'
 
 from argparse import ArgumentParser
 import logging
