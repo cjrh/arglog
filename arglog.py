@@ -13,8 +13,9 @@ from argparse import ArgumentParser
 import logging
 
 
-def patch(parser, default='INFO', basicConfig_kwargs={}):
+def patch(parser, default='INFO', basicConfig_kwargs=None):
     # type: (ArgumentParser, str) -> None
+    basicConfig_kwargs = basicConfig_kwargs or {}
     parser.add_argument(
         '-l', '--loglevel', help='Logging level', default=default,
         choices=list(logging._nameToLevel.keys()),
