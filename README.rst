@@ -42,4 +42,4 @@ However, you now also have a new CLI option for your program:
 
     $ python main.py --loglevel=WARNING
 
-All of the logging levels are supporting, ``INFO``, ``DEBUG`` and so on.
+All of the logging levels are supported, ``INFO``, ``DEBUG`` and so on.
