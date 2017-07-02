@@ -11,6 +11,11 @@
     :target: https://pypi.python.org/pypi/arglog
 
 .. image:: https://img.shields.io/github/tag/cjrh/arglog.svg
+    :target: https://img.shields.io/github/tag/cjrh/arglog.svg
+
+.. image:: https://img.shields.io/badge/install-pip%20install%20arglog-ff69b4.svg
+    :target: https://img.shields.io/badge/install-pip%20install%20arglog-ff69b4.svg
+
 
 arglog
 ======
